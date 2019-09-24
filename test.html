@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Lab Tests</title>
+</head>
+<body>
+   <script>
+      function canBalance(array) {
+         //Type your solutions here
+         let firsthalf = []; let secondhalf = array; let sumfirst; let sumsecond;
+         // let total = array.reduce((a,b) => a + b, 0)
+         for (let i = 0; i <= array.length+1; i++) {
+            firsthalf.push(secondhalf[0])
+            sumfirst = firsthalf.reduce((a,b) => a + b, 0)
+            console.log(sumfirst)
+            secondhalf.shift();
+            // secondhalf.push(array)
+            sumsecond = secondhalf.reduce((c,d) => c + d, 0)
+            console.log(sumsecond)
+            if (sumfirst == sumsecond) {
+               console.log([firsthalf.length, secondhalf.length])
+               break
+            } else {
+               continue
+            }
+         }
+         console.log(-1)
+      }
+
+      canBalance([1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+   </script>
+</body>
+</html>
