@@ -4,7 +4,7 @@ function unique(arr) {
    //code goes here
    let result = [];
    //sort the array in ascending order first
-   arr.sort(function(i,j) {return i - j});
+   arr.sort((i,j) => i - j);
    //loop through each array to compare
    for (let i = 0; i <= arr.length; i++) {
       if (arr[i] === arr[i + 1]) {
