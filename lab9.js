@@ -6,13 +6,27 @@
 //    var self = this;
 //    function bar() {
 //    self.say();
-//    }it
-//    ems.forEach(function() {
+//    }
+//    items.forEach(function() {
 //    self.say();
 //    });
 //    for (var i = 0; i < items.length; i++) {
 //    bar();
 //    }
 // }
+// Foo.prototype.say = function() {
+//    console.log(arguments);
+// }
 
-function es5toes6() {}
+class Foo {
+   constructor(options, name = "foo") {
+      this.index = options;
+      this.name = name;
+   }
+   bar() {
+      this.say();
+   }
+}
+Foo.prototype.say() = function() {
+   console.log(arguments);
+}
